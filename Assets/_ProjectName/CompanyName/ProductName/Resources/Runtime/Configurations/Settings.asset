@@ -14,6 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sections:
   - {fileID: 8682500773266865113}
+  - {fileID: 4704514910926503501}
+--- !u!114 &4704514910926503501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b58d1ac9634e3391d62be81eb16176, type: 3}
+  m_Name: AppLovinMaxServiceSettings
+  m_EditorClassIdentifier: 
+  <InterstitialAdUnitIds>k__BackingField:
+  - 58f24a034a1ab4d2
+  <RewardedAdUnitIds>k__BackingField:
+  - 39da376bc3211fc1
+  - 67ad4fcfac164253
+  <BannerAdUnitIds>k__BackingField:
+  - 7d54f8fe50d4b222
 --- !u!114 &8682500773266865113
 MonoBehaviour:
   m_ObjectHideFlags: 0
