@@ -1,0 +1,18 @@
+{
+  "name": "Editor",
+  "rootNamespace": "CompanyName.ProductName.Scripts.Editor",
+  "references": [
+    "GUID:d49626a0c2cd94b3ead069eb817c112e"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Runtime",
+  "rootNamespace": "CompanyName.ProductName.Scripts.Runtime",
+  "references": [
+    "GUID:6055be8ebefd69e48b49212b09b47b2f",
+    "GUID:a4cfc1a18fa3a469b96d885db522f42e"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
