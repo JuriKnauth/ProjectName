@@ -1,5 +1,6 @@
 using System.Collections;
 using CompanyName.ProductName.Scripts.Runtime.Services.ApplicationServices;
+using CompanyName.ProductName.Scripts.Runtime.Services.AppLovinMaxServices;
 using CompanyName.ProductName.Scripts.Runtime.Services.LoadingOverlayServices;
 using CompanyName.ProductName.Scripts.Runtime.Services.LoggingServices;
 using CompanyName.ProductName.Scripts.Runtime.Services.SceneManagerServices;
@@ -38,6 +39,17 @@ namespace CompanyName.ProductName.Scripts.Runtime.Services.BootManagerServices
                             () => LoggerService.Setup
                                 (
                                     SettingsService.Instance?.Settings?.Get<LoggerServiceSettings>()
+                                )
+                        ),
+                        new LoadingStep(
+                            $"Loading {nameof(AppLovinMaxService)}...",
+                            () => AppLovinMaxService.Instance?.Initialize()
+                        ),
+                        new LoadingStep(
+                            $"Loading {nameof(AppLovinMaxService)}...",
+                            () => AppLovinMaxService.Setup
+                                (
+                                    SettingsService.Instance?.Settings?.Get<AppLovinMaxServiceSettings>()
                                 )
                         ),
                         new LoadingStep(
