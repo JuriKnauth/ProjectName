@@ -1,0 +1,98 @@
+# ==== Unity (core) ====
+.utmp/
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+*.log
+
+# Memory / recordings / crash
+[Mm]emoryCaptures/
+[Rr]ecordings/
+sysinfo.txt
+mono_crash.*
+
+# Unity generated meta (keep .meta files themselves!)
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Ignore Blender backup files (Unity imports .blend; backups not needed)
+*.blend1
+*.blend1.meta
+
+# TestRunner auto scenes
+[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# Builds & packages
+*.apk
+*.aab
+*.unitypackage
+*.unitypackage.meta
+*.app
+
+# Crashlytics
+crashlytics-build.properties
+
+# ==== IDE / tooling ====
+# Visual Studio / MSBuild
+.vs/
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# JetBrains / Rider
+.idea/
+[Aa]ssets/Plugins/Editor/JetBrains*
+*.DotSettings
+*.DotSettings.user
+
+# VS Code
+.vscode/
+
+# Gradle
+.gradle/
+
+# Consulo / legacy
+ExportedObj/
+.consulo/
+*.unityproj
+
+# ==== OS junk ====
+.DS_Store
+Thumbs.db
+
+# ==== Addressables (defaults) ====
+/ServerData
+[Aa]ssets/StreamingAssets/aa*
+[Aa]ssets/AddressableAssetsData/link.xml*
+[Aa]ssets/Addressables_Temp*
+[Aa]ssets/AddressableAssetsData/*/*.bin*
+
+# ==== Visual Scripting (generated) ====
+[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db
+[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
+[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers
+[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
+
+# ==== Asset Store tools (optional) ====
+# [Aa]ssets/AssetStoreTools*
+
+# ==== Burst / caches ====
+[Bb]urstCache/
+
+# ==== Android Gradle caches in project (rare, but safe) ====
+**/.gradle/
