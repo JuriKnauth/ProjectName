@@ -37,15 +37,15 @@ namespace CompanyName.ProductName.Scripts.Runtime.Services.LoggingServices
         [HideInCallstack]
         public static void Error(string message, GameObject gameObject) => Log(LogLevel.Error, message, gameObject);
 
-        public static IEnumerator Setup(SettingsSectionLoggerService settingsSectionLoggerService)
+        public static IEnumerator Setup(LoggerServiceSettings loggerServiceSettings)
         {
-            if (settingsSectionLoggerService == null)
+            if (loggerServiceSettings == null)
             {
-                Warning($"{nameof(SettingsSectionLoggerService)} is null");
+                Warning($"{nameof(LoggerServiceSettings)} is null");
                 yield break;
             }
 
-            MinimumLevel = settingsSectionLoggerService.MinimumLogLevel;
+            MinimumLevel = loggerServiceSettings.MinimumLogLevel;
 
             yield return null;
         }

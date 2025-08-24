@@ -35,8 +35,10 @@ namespace CompanyName.ProductName.Scripts.Runtime.Services.BootManagerServices
                         ),
                         new LoadingStep(
                             $"Loading {nameof(LoggerService)}...",
-                            () => LoggerService.Setup(SettingsService.Instance?.Settings
-                                                                     ?.Get<SettingsSectionLoggerService>())
+                            () => LoggerService.Setup
+                                (
+                                    SettingsService.Instance?.Settings?.Get<LoggerServiceSettings>()
+                                )
                         ),
                         new LoadingStep(
                             "Loading UserInterface Scene...",
