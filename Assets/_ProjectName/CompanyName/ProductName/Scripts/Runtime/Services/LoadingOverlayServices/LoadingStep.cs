@@ -6,15 +6,11 @@ namespace CompanyName.ProductName.Scripts.Runtime.Services.LoadingOverlayService
     public readonly struct LoadingStep
     {
         public string Name { get; }
-
-        public Func<IEnumerator> AsyncAction { get; }
-
         public float MaxDurationSeconds { get; }
 
+        public Func<IEnumerator> AsyncAction { get; }
         public Func<bool> Condition { get; }
-
         public Func<float> ProgressGetter { get; }
-
         public Action OnCompleted { get; }
 
         public LoadingStep(

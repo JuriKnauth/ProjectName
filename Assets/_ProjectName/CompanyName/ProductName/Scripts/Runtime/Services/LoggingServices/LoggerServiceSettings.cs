@@ -5,7 +5,6 @@ namespace CompanyName.ProductName.Scripts.Runtime.Services.LoggingServices
 {
     public sealed class LoggerServiceSettings : SettingsSection
     {
-        [field: SerializeField]
-        public LogLevel MinimumLogLevel { get; private set; } = LogLevel.Info;
+        [field: SerializeField] public LogLevel MinimumLogLevel { get; private set; } = LogLevel.Info;
     }
 }
