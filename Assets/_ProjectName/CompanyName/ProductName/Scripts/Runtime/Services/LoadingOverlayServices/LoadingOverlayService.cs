@@ -14,14 +14,18 @@ namespace CompanyName.ProductName.Scripts.Runtime.Services.LoadingOverlayService
         private const string PrefabPath = "Prefabs/UserInterfaces/LoadingOverlayView";
 
         private readonly Queue<LoadingCommand> _queue = new Queue<LoadingCommand>();
+        
         private bool _isRunning;
         private Coroutine _runner;
-
         private LoadingOverlayView _view;
 
         public string Name => nameof(LoadingOverlayService);
         public bool IsReady { get; private set; }
 
+        public event Action<LoadingCommand, int, int> OnCommandStarted;
+        public event Action<LoadingCommand, int, int> OnCommandFinished;
+        public event Action OnAllCommandsFinished;
+        
         public IEnumerator Initialize()
         {
             yield return EnsureViewRoutine();
@@ -32,10 +36,6 @@ namespace CompanyName.ProductName.Scripts.Runtime.Services.LoadingOverlayService
 
             yield return null;
         }
-
-        public event Action<LoadingCommand, int, int> OnCommandStarted;
-        public event Action<LoadingCommand, int, int> OnCommandFinished;
-        public event Action OnAllCommandsFinished;
 
         public void Enqueue(LoadingCommand command)
         {

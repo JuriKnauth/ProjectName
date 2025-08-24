@@ -17,6 +17,14 @@ namespace CompanyName.ProductName.Scripts.Runtime.SettingServices
         public string Name => nameof(SettingsService);
         public bool IsReady { get; private set; }
 
+        public event Action<Settings> OnSettingsUpdated;
+        
+        public T Get<T>() where T : SettingsSection
+        {
+            if (!Settings) return null;
+            return Settings.Get<T>();
+        }
+        
         public IEnumerator Initialize()
         {
             Load();
@@ -24,15 +32,7 @@ namespace CompanyName.ProductName.Scripts.Runtime.SettingServices
             yield break;
         }
 
-        public event Action<Settings> OnSettingsUpdated;
-
         public void Reload() => Load();
-
-        public T Get<T>() where T : SettingsSection
-        {
-            if (!Settings) return null;
-            return Settings.Get<T>();
-        }
 
         private void Load()
         {

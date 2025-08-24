@@ -35,7 +35,7 @@ namespace CompanyName.ProductName.Scripts.Runtime.UserInterfaces.Debug
         private string _hexException;
         private string _hexLog;
         private string _hexWarning;
-        private volatile int _pendingCount; // cheap check in Update()
+        private volatile int _pendingCount;
 
         private void Awake()
         {
