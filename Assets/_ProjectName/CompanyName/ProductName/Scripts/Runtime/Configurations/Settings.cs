@@ -12,6 +12,14 @@ namespace CompanyName.ProductName.Scripts.Runtime.Configurations
 
         private Dictionary<Type, SettingsSection> _cache;
 
+        public T Get<T>() where T : SettingsSection
+        {
+            if (_cache == null || _cache.Count == 0) RebuildCache();
+            return _cache != null && _cache.TryGetValue(typeof(T), out SettingsSection s)
+                ? (T)s
+                : null;
+        }
+
         private void OnEnable() => RebuildCache();
 
         private void RebuildCache()
@@ -25,14 +33,6 @@ namespace CompanyName.ProductName.Scripts.Runtime.Configurations
                 Type t = s.GetType();
                 if (!_cache.ContainsKey(t)) _cache[t] = s;
             }
-        }
-
-        public T Get<T>() where T : SettingsSection
-        {
-            if (_cache == null || _cache.Count == 0) RebuildCache();
-            return _cache != null && _cache.TryGetValue(typeof(T), out SettingsSection s)
-                ? (T)s
-                : null;
         }
     }
 }
